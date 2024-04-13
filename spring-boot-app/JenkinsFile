@@ -66,10 +66,10 @@ pipeline {
             }
         }
     }*/
-   /* stage('Delete data'){
+    stage('Delete data'){
       steps{
-        
+                sh 'sudo rm -Rf /var/lib/jenkins/workspace/CICD-PIPELINE'   
       }
-    }*/
+    }
   }
 }
