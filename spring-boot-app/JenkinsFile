@@ -12,7 +12,7 @@ pipeline {
         //git branch: 'main', url: 'https://github.com/bin9638/CICD-PROJECT.git'
       }
     }
-   /* stage('Build and Test') {
+    stage('Build and Test') {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
@@ -21,7 +21,8 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://3.25.111.18:9000"//your Sonarqube url
+        SONAR_URL = "http://3.24.136.3:9000"
+        //your Sonarqube url
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -64,5 +65,5 @@ pipeline {
             }
         }
     }
-  }*/
+  }
 }
