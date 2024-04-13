@@ -46,7 +46,7 @@ pipeline {
         }
       }
     }
-    stage('Update Deployment File') {
+  /*  stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "CICD-PROJECT"
             GIT_USER_NAME = "bin9638"
@@ -65,6 +65,6 @@ pipeline {
                 //git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
             }
         }
-    }
+    }*/
   }
 }
