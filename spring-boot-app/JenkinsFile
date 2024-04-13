@@ -53,11 +53,13 @@ pipeline {
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
+                script {
+                   NEW_NAME = "        image: bin9638/ultimate-cicd:${BUILD_NUMBER}"
+                }
                 sh '''
                     git config user.email "vinhkhanhbin@gmail.com"
                     git config user.name "bin9638"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    NEW_NAME = "        image: bin9638/ultimate-cicd:${BUILD_NUMBER}"
                     sed -i "19d" spring-boot-app-manifests/deployment.yml
                     sed -i "19i ${NEW_NAME}" spring-boot-app-manifests/deployment.yml
                     git add spring-boot-app-manifests/deployment.yml
