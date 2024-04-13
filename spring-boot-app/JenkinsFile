@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://54.79.182.203:9000"
+        SONAR_URL = "http://3.25.210.186:9000"
         //your Sonarqube url
       }
       steps {
@@ -66,5 +66,10 @@ pipeline {
             }
         }
     }*/
+    stage('Delete data'){
+      steps{
+        
+      }
+    }
   }
 }
